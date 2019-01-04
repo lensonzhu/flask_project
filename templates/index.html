@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Index{% endblock %}
+
+{## {% block content %}
+<div class="page-header">
+    <h1>hello world</h1>
+</div>
+<p>local date and time is {{ moment(current_time).fromNow(refresh=True).format('LLL') }}.</p>
+<p>that was {{ moment(current_time).fromNow(refresh=True) }}.</p>
+{% endblock %}
+##}
+
+
+{# make a form and submit #}
+{% block page_content %}
+<div class="page-header">
+    <h1>hello, 
+        {% if name %}{{ name }}
+        {% else %}Stranger
+        {% endif %}!
+    </h1>
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}
+
+
