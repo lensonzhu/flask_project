@@ -21,6 +21,11 @@
         {% else %}Stranger
         {% endif %}!
     </h1>
+    {% if not known %}
+    <p>Pleased to meet you !</p>
+    {% else %}
+    <p>Nice to meet you again !</p>
+    {% endif %}
 </div>
 {{ wtf.quick_form(form) }}
 {% endblock %}
